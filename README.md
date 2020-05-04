@@ -1,1 +1,3 @@
-# MentorshipBackendOpenSourceContribution
+# Mentorship Backend Open Source Contribution
+
+## This includes the final report of our contribution to Mentorship Backend for the course "Applied Software Engineering" of the orientation "Software Engineering". This course is part of the study program of the Department of Management Science and Technology in Athens University of Economics and Business.
