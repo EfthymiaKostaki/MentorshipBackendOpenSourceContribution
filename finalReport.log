@@ -1,0 +1,219 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7420 64-bit) (preloaded format=pdflatex 2020.5.24)  24 MAY 2020 14:46
+entering extended mode
+**C:/Users/kosta/git/MentorshipBackendOpenSourceContribution/finalReport.tex
+(C:/Users/kosta/git/MentorshipBackendOpenSourceContribution/finalReport.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-05-14>
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count175
+\l__pdf_internal_box=\box45
+)
+No file finalReport.aux.
+\openout1 = `finalReport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count176
+\scratchdimen=\dimen137
+\scratchbox=\box46
+\nofMPsegments=\count177
+\nofMParguments=\count178
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count179
+\MPscratchDim=\dimen138
+\MPnumerator=\count180
+\makeMPintoPDFobject=\count181
+\everyMPtoPDFconversion=\toks19
+)
+("C:\Users\kosta\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+<images/anitab-logo.png, id=1, 398.99063pt x 103.88812pt>
+File: images/anitab-logo.png Graphic file (type png)
+<use images/anitab-logo.png>
+Package pdftex.def Info: images/anitab-logo.png  used on input line 30.
+(pdftex.def)             Requested size: 284.53947pt x 85.36159pt.
+<images/mentorship-system-logo.png, id=3, 193.47281pt x 131.74219pt>
+File: images/mentorship-system-logo.png Graphic file (type png)
+<use images/mentorship-system-logo.png>
+Package pdftex.def Info: images/mentorship-system-logo.png  used on input line 
+38.
+(pdftex.def)             Requested size: 113.81142pt x 113.8167pt.
+ [1
+
+{C:/Users/kosta/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/ko
+sta/git/MentorshipBackendOpenSourceContribution/images/anitab-logo.png> <C:/Use
+rs/kosta/git/MentorshipBackendOpenSourceContribution/images/mentorship-system-l
+ogo.png>]
+No file finalReport.toc.
+\tf@toc=\write3
+\openout3 = `finalReport.toc'.
+
+[2]
+
+! Package keyval Error: wdth undefined.
+
+See the keyval package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.64 ...ight=10cm, wdth=15cm]{Setup-problems.png}}
+                                                  
+? 
+<images/Setup-problems.png, id=20, 832.61063pt x 330.48468pt>
+File: images/Setup-problems.png Graphic file (type png)
+<use images/Setup-problems.png>
+Package pdftex.def Info: images/Setup-problems.png  used on input line 64.
+(pdftex.def)             Requested size: 716.857pt x 284.52756pt.
+
+Overfull \hbox (4.08391pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10 Guidance with re-sources for con-tribut-ing and Com-mit Mes-s
+age Style Guide, 
+ []
+
+! Undefined control sequence.
+l.77   \itemm
+              Meaningful impact in mentoring women in tech,
+? 
+[3] [4 <C:/Users/kosta/git/MentorshipBackendOpenSourceContribution/images/Setup
+-problems.png>]
+<images/FirstCommunication.png, id=29, 553.46774pt x 182.48175pt>
+File: images/FirstCommunication.png Graphic file (type png)
+<use images/FirstCommunication.png>
+Package pdftex.def Info: images/FirstCommunication.png  used on input line 93.
+(pdftex.def)             Requested size: 431.50885pt x 142.26378pt.
+ [5 <C:/Users/kosta/git/MentorshipBackendOpenSourceContribution/images/FirstCom
+munication.png>]
+<images/issue482.png, id=34, 482.55281pt x 427.5975pt>
+File: images/issue482.png Graphic file (type png)
+<use images/issue482.png>
+Package pdftex.def Info: images/issue482.png  used on input line 143.
+(pdftex.def)             Requested size: 398.35396pt x 341.43253pt.
+ [6]
+Overfull \hbox (69.28612pt too wide) in paragraph at lines 155--155
+[]\OT1/cmr/bx/n/12 Issue 5 - Op-ti-mise code for re-peated code in `app/api/dao
+/user.py`
+ []
+
+[7 <C:/Users/kosta/git/MentorshipBackendOpenSourceContribution/images/issue482.
+png>]
+Overfull \hbox (70.47948pt too wide) in paragraph at lines 167--167
+[]\OT1/cmr/bx/n/12 Issue 6 - Change Test Struc-ture for app/api/dao/task[]comme
+nt.py
+ []
+
+
+Overfull \hbox (10.46727pt too wide) in paragraph at lines 189--189
+[]\OT1/cmr/bx/n/12 Issue 8 -Add only Python3 sup-port in tests - \OT1/cmr/bx/it
+/12 In Progress
+ []
+
+[8] [9] (finalReport.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1222 strings out of 480803
+ 19016 string characters out of 2895868
+ 254963 words of memory out of 3000000
+ 17247 multiletter control sequences out of 15000+200000
+ 538063 words of font info for 43 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,6n,25p,886b,255s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\kosta\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm1000.pk><C:/Users/kosta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><C:/Users/kosta/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/kosta/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/kosta/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/kost
+a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Users/kosta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/kosta/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr17.pfb><C:/Users/kosta/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr9.pfb><C:/Users/kosta/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on finalReport.pdf (9 pages, 454773 bytes).
+PDF statistics:
+ 83 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
