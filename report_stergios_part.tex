@@ -1,0 +1,63 @@
+\subsection{Issue 1 - Create Quality Assurance table for Update Task API - \emph{Merged} \#473}
+Pull Request - Stergios
+
+\subsubsection{Issue}
+photo edo {Issue 473}
+\subsubsection{Communication with the team}
+This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them.
+Fisrtly, we thought that new unit tests were required, combined with the quallity assurane table, but after our comminucation it was clear to us that only the table had to be completed, as the tests already existed.
+While doing this table, by executing some tasks, we found out that there was a possible problem, and an issue had to be raised, as the maintainer agreed.
+
+\subsubsection{Our work}
+We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+
+Regarding the way we created the table, firstly we found th file that we had to change, which was easy as the creator of the issue had already mentioned which one is it. Then the difficult part was understanding what exaclty we had to write on the table and how to test it. After going through the test cases to take some ideas on what we could test on the backend server, we tried to create an account on the server. We used temp mail, as it was suggested, and created 4 profiles, so we could test all the possibilities we wanted. For example, we needed a user with a non-verified email, and one with verified. 
+Then, we strugled a lot to find out the parameters-arguments that were needed for completing the task we wanted. For example a "token" was required but there was nowhere any explanation about this token. After some searching, we realised that when a user is logging in the server, the success message also provides this token. But even the way that we needed to insert the token was unusual, as we had to write "Bearer <token here>"
+Finally, when we had our users ready, and new how to use the backend server, we finallly tested all the scenarios and write them down in the table.
+
+
+\subsubsection{Testing}
+Since this change was a change in the UI we did not need to run local testing or write new tests. Instead, our changes were visible in github, as the file was written in markdown language and that's how we verified that our changes were visible and correct. Also, we verified that the continuous integration testing in Travis CI was passing. 
+\subsubsection{Code Reviews}
+Our pull request received immidiate feedback and reviews. our first PR needed some important changes:
+1) We were checking multiple failing variables, but only one was required each time. For example we were testing the result of the task with arg1 and arg2 causing the task to fail but arg1 was enough and a separate test for arg2 was required. 
+2) We were describing a variable/argument as "wrong" but we did not specify why it was wrong. For example, a user could not exist, or he could have not accepted the terms, or even not verufy his email address. These 3 cases should be separate and specified.
+3) We reffered the users with pronouns and we had to make it general ("the user" instead of "he").
+4) We had to fix merge conflocts as the PR was approved later.
+ Also, other contributors viewed our changes and accepted them. 
+\subsubsection{Change}
+Edo na balo screenshot tis allages?
+
+\subsection{Issue 2 -Fix description messages on Mentorship Relation - \emph{Merged} \#554}
+
+
+\subsubsection{Issue}
+photo edo
+\subsubsection{Communication with the team}
+A section
+
+\subsubsection{Our work}
+\subsubsection{Testing}
+\subsubsection{Code Reviews}
+\subsubsection{Change}
+
+\subsection{Issue 3 - `Complete task` not including all the necessary information when request id is not in accepted mode - \emph{Pending} \#537}
+
+\subsubsection{Issue}
+edo photo {Issue 537}
+\subsubsection{Communication with the team}
+We had already talked about this issue with the maintainer in a PR, so after the maintainer's approval, we opened a new issue, and got assigned to it. We also clarified, that the solution suggested on this issue, is giving higher priority to a specific argument, whih was the state of the relationship status, instead of the one that was then highest, which was the existence of the task.
+
+\subsubsection{Our work}
+
+We added an if statement before the existings one, so that it will be prioratized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
+
+After the original 
+\subsubsection{Testing}
+Initially, we didn't have any unit testing for the speific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
+After our PR was reviewed and after all the changes requested had been done, an additional test was asked, a unit test. To create this, we needed to also add a user to the database and create a new relation of this user with another user.
+
+\subsubsection{Code Reviews}
+The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
+\subsubsection{Change}
+na bi o kodikas logika
