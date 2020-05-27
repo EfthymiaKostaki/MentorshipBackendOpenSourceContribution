@@ -397,17 +397,87 @@ as_mentor["sent"]["pending"] =
             MentorshipRelationState.PENDING)
 \end{lstlisting}
 
-\subsection{Issue 6 - Title of issue to be added}
-Pull Request - Efi
-
+\subsection{Issue 6 - Change Test Structure for app/api/dao/task\_comment.py - \emph{Accepted} \#553}
 \subsubsection{Issue}
-A section
+\hspace{0.5cm}We decided to take a look on the testing part and see if we could write new unit tests or fix any errors. We saw that the project did not have the codecoverage on the main reppository so we could knw which classes were not tested enough so we decided to use the package coverage.py locally to find the coverage.
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=7cm, width=15cm]{testing-coverage.png}}
+    \caption{Coverage Discussion}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
+\hspace{0.5cm}The community agreed that this was a really good idea to focus more on tests in this project and to write new tests or implement changes in the existing ones. They also wanted help into adding the badge of codecoov but since we did not have an account there and it was not our repository we decided that we could not help with that.
+
+What we did find out what-so-ever was that the structure of all the tests was not consistent that's why we proposed this issue:
+ 
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=7cm, width=15cm]{issue553.png}}
+    \caption{Issue 553}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 
 \subsubsection{Communication with the team}
-A section
+\hspace{0.5cm}Since the issue was suggested by us we were waiting to hear the response from the main maintainerIsabel about this issue.
 
-\subsubsection{More subsections}
-A section
+The main maintainer Isabel wrote that she believes that there are issues with higher priority but we could go ahead and work on this issue and propose a solution and how we believe it solves the problem. We thought it would be bettor to implement the change and propose the final version of it istead of submitting a Work In Progress Pull Review so the maintainers could check the whole width of our change.
+\subsubsection{Our work}
+\hspace{0.5cm}We created a specific branch for this issue first locally and then add this branch to our remote repository. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+
+The problem stemmed from the fact that all the testing of the project was not following the same structure. In some cases the code included in each folder test for base setup and in others not, in others a method was tested in a specific file and in others not, so we thought it was crucial to implement a change which would expand the consistency of the project. We decided that the best strategy for changing the given file was this:
+\begin{itemize}
+  \item Write a base setup for tests/task\_comments/test\_dao.py
+  \item Split  tests/task\_comments/test\_dao.py into four different files. In each one, every method would be tested seperately.
+\end{itemize}
+
+To address the first bullet, we needed to understand how a base setup is created and how it is used. We wanted to understand how the setup method is used and how it should be structured to serve our needs. Since, the create\_task\_comment method  was used in all the methods we decided that this was the method which should be used for the setup to avoid code repetition. In order to save each task comment we had to add it in the session of the database and also to commit in the database. In this way, the base setup class which created a new Test Case and all the data, could be used in the unit testing classes we implemented. 
+
+For the second bullet, we splited the test methods into four different files, one for each method:
+\begin{itemize}
+  \item test\_dao\_create\_task\_comment.py 
+  \item test\_dao\_delete\_comment.py  
+  \item test\_dao\_modify\_comment.py 
+  \item test\_dao\_find\_by\_task\_id.py 
+\end{itemize}
+\subsubsection{Testing}
+\hspace{0.5cm}Testing our addition in this case was harder than in previous points since we were altering the testing of the project. Firstly, we did not delete the class we were altering yet, so we saw the counter of how many tests were already running before our addition. Then, we included our tests and saw if all our tests were passing the testing locally. All the tests were successfully passing in the command line but we wanted to double-check so we run the test\_task\_comments folder seperately through PyCharm. Once we were sure that all our changes were passing we deleted the initial file, commited and created the Pull Request.
+
+\subsubsection{Code Reviews}
+\hspace{0.5cm}In the beginning our change received mixed reviews. Of course, there were suggested some minor changes to the code such as to remove unnecessary imports and repetitive code (which turned out to be from the initial testing) but also the argument that this change was not needed right now since there was not a problem.
+
+Regarding the minor changes we addressed them all, since there were important for the crrectness of our change. One suggested change about the repited code turned out to have been from the primary testing so we thought that even though it did not seem so, that it was needed in the project. Turns out it was not so we fixed it.
+
+Regarding the major arguments about the idea of the change and if it was really needed at this point we analyzed our thinking and said that:
+\begin{itemize}
+\item We started working on this project taking into consideration \textbf{the structure of the tests} in the other parts of the software.
+We saw that tasks and mentorship relation folder was structured like the solution we were proposing. 
+\item Of course, we saw in some other parts of the project in the testing this structure wasn't followed, but the main idea was the \textbf{consistency} of the testing material so as everyone that needs to write some testing (for example to test a new method) will immediately understand where he/she should do so.
+\item \textbf{Expandability of the testing}.
+We think this may overlap with the previous point but for example, if we realize at some point that we need on the task comments further testing on the DAO part or if new functionality is added then, according to the other parts of the testing we highlighted in point 1, we shouldn't use the same class for testing the same method more than once and also test the other methods.
+\item \textbf{Base test for setup}
+We saw that all the methods in task\_comments\_dao were using the same method for the setup that is why we created a test base for the task comments so to avoid code repetition. Our thinking is that the setup test base should be further expanded so the task\_comments\_api classes who test each method use this as well since they all have a setup and some common code. With the change suggested in this pull request, us or someone else interested would be able to intergrade these changes we just mentioned so that the test base covers both the API and the DAO part of the task comments.
+\end{itemize}
+
+The maintainer Sanket, who had his doubts about our change after our discussion wrote that he accepts our change and also suggested some change about supporting Python2 in our code. We altered our code and implemented this change but turns out that other parts of the testing still support Python2. We opened another issue for that-namely issue 8. 
+
+\subsubsection{Change}
+\hspace{0.5cm}As our change involves the same tests as before we will write in this report only the Test Case we wrote since all the other changes can be found on Github. This file is included in: tests/task\_comments/task\_comments\_base\_setup.py
+
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=7cm, width=15cm]{issue553-change.png}}
+    \caption{Issue 553 Change}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 \subsection{Issue 7 - Title of issue to be added}
 Pull Request - Efi
 
