@@ -200,19 +200,66 @@ After our PR was reviewed and after all the changes requested had been done, an 
 The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
 \subsubsection{Change}
 
-\subsection{Issue 4 - Title of issue to be added}
-Pull Request - Efi
-
-
+\subsection{Issue 4 - Improve the description of the app on the Swagger UI docs - \emph{Merged} \#482}
 \subsubsection{Issue}
-A section
+\hspace{0.5cm}This issue was referring to the description of the app which the developers view if they have cloned the repository locally or in the deployed app remotely in Heroku.
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=12cm, width=14cm]{issue482.png}}
+    \caption{Issue 482}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
 
-\subsubsection{Communication with the team}
-A section
+\vfill
+\clearpage
+\subsubsection{Communication with the team}										
+\hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them. We realized while working on the issue that there was an issue with the namespaces since there was a default namespace which was not referring to any API. We decided to ask about this if this was intentional or it was a problem in the UI. In figure shown above this problem is visible in the `default namespace` resource. Isabel (the main mainteiner and creator of the project) told us that this was really an issue and that she did not know how to solve it. She suggested that if we solve this problem we can commit the change in the current pull request so as to further expand it so it includes the solution of this problem as well.
 
-\subsubsection{More subsections}
-A section
+\subsubsection{Our work}
 
+\hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+
+Regarding the initial issue, it turned out to be hard for us t understand which part on the project we should change in order for our changes to be visible in the User Interface. We used Atom, the text editor, to find the parts of the software which had the initial description we wanted to change. They were two, the swagger.json and the api\_extension.py file. Since we did not know which was the correct file we should change we decided to change both of them. The correct one turned out to be the api\_extension.py file. We were able to view our changes locally.
+
+Regarding the new part of the issue we identified and proposed, we needed to understand were the problem was coming from. It could have been from the call inside the specific resources or in some other part of the project. We searched a lot and found the documentation of the flask\_restplus library which was used in the file we wanted to change. We found the method Api() and which parameters it could include and we were able to change the arguments and change the name of the `default namespace'. The documentation however, did not help us fix the actual issue which was to remove this resource. We searched again and found out that this library was actually open-source. In the issues of the Github repository we were able to find an issue about the same problem we had and a suggested solution to it. By implementing this code we were able to solve the issue.
+\subsubsection{Testing}
+\hspace{0.5cm}Since this change was a change in the UI we did not need to run local testing or write new tests. Instead, our changes were visible in the localhost in our browser and that's how we verified that our changes were visible and correct. Also, we verified that the continuous integration testing in Travis CI was passing. 
+\subsubsection{Code Reviews}
+\hspace{0.5cm}Our pull request received immidiate feedback and reviews. Since the change was in the User Interface, Isabel asked us to include a screenshot of the change proposed in the description. Also, other contributors viewed our changes and accepted them. 
+\subsubsection{Change}
+\hspace{0.5cm}The merged change is this:
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=8cm, width=18cm]{issue482-UI.png}}
+    \caption{Change in the UI}
+    \label{fig:verticalcell}
+\end{figure}
+\vfill
+\clearpage
+%-----
+\hspace{0.5cm}This change required to change these files and add new code:
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=8cm, width=18cm]{change-issue482.png}}
+    \caption{Code change}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+
+\vfill
+\clearpage
+\subsubsection{Happy Moments!}
+The creator and main maintainer of the project congratulated us for our effiort and change in the UI which urged us to find other aspects of the software in which we could contribute.
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=10cm, width=15cm]{Happy-Moments.png}}
+    \caption{Happy Moments!}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 \subsection{Issue 5 - Title of issue to be added}
 Pull Request - Efi
 
