@@ -260,17 +260,142 @@ The creator and main maintainer of the project congratulated us for our effiort 
 %-----
 \vfill
 \clearpage
-\subsection{Issue 5 - Title of issue to be added}
-Pull Request - Efi
 
+\subsection{Issue 5 - Optimise code for repeated code in `app/api/dao/user.py` `get\_user\_dashboard`- \emph{Accepted} \#418}
 \subsubsection{Issue}
-A section
-
+\hspace{0.5cm}This issue required simplifying a method which was around 200 lines in to less.We successfully removed 70 lines with repeated code.
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=5cm, width=14cm]{issue418.png}}
+    \caption{Issue 418}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 \subsubsection{Communication with the team}
-A section
+\hspace{0.5cm}It was crucial for us to understand how we could verify that our changes were correct and that the project was having the same functionality as before. So we asked in the issue how we could verify that or if it was necessary to write some new unit tests. The maintainer told us that we should just verify that the unit tests are working as before.
 
-\subsubsection{More subsections}
-A section
+\subsubsection{Our work}
+\hspace{0.5cm}We created a specific branch for this issue first locally and then add this branch to our remote repository. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+
+Firstly, we realized that the as\_mentor and as\_mentee dictionaries were exactly the same and that we could delete the initialization of one and copy it to the other one. Since, these dictionaries had also subdictionaries we found out we should not copy them using the traditional copy() method since in some occasions when changing the subdictionary in the one dictionary could actually change the other one as well. To solve this problem, we found out the copy library which offers a method named deepcopy() which could solve our problem. We used this method and successfully deleted 15 lines of repeated code.
+
+The second part of our work was to create a method which could remove further the repeated code. All the dictionary was assesed this way for more than 100 lines:
+\lstset{language=Python}
+\begin{lstlisting}
+as_mentee["received"]["completed"] = [
+    relation.response
+   for relation in mentee_received_relations
+   if relation.state == MentorshipRelationState.COMPLETED
+]
+as_mentee["received"]["cancelled"] = [
+   relation.uuresponse
+   for relation in mentee_received_relations
+   if relation.state == MentorshipRelationState.CANCELLED
+]
+\end{lstlisting}
+
+After we understood which was the problem we tried to experiment and decide which parameters should this method have. We decided that these two were enough. First, the mentor\_or\_mentee\_received\_or\_sent which would include the relations of the mentee or the mentor and if these relations are received or sent and the mentorship\_relation\_state\_wanted which could take one of these values:
+\begin{itemize}
+  \item PENDING
+  \item CANCELLED
+  \item COMPLETED
+  \item REJECTED
+\end{itemize}
+
+\hspace{0.5cm}This method is static as they are all the other methods in this file and has a for loop similar to the initial one taking use of all the arguments and returns a list to be added in each subdictionary.
+\subsubsection{Testing}
+\hspace{0.5cm}Since the maintainer told us that we do not need to write unit tests about our change we verified that all the local testing was passing and of course that the continuous integration testing in Travis CI was passing.
+\subsubsection{Code Reviews}
+\hspace{0.5cm}Unfortunately, this pull request has not been reviewed yet but we asked the main maintainer to do that as soon as possible. She said that she does not have much bandwidth and will try get back to us in that as soon as possible.
+
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=7cm, width=15cm]{issue418-ask-for-review.png}}
+    \caption{Issue 418 - Ask for review}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
+
+\subsubsection{Change}
+\hspace{0.5cm}Our proposed change is this:
+\lstset{language=Python}
+\begin{lstlisting}
+@staticmethod
+def get_state(mentor_or_mentee_received_or_sent, 
+                       mentorship_relation_state_wanted):
+   value = [relation.response
+   for relation in mentor_or_mentee_received_or_sent
+   if relation.state == mentorship_relation_state_wanted]
+   return value
+\end{lstlisting}
+\lstset{language=Python}
+\begin{lstlisting}
+as_mentor = copy.deepcopy(as_mentee)
+as_mentee["received"]["accepted"] = 
+             UserDAO.get_state(mentee_received_relations, 
+             MentorshipRelationState.ACCEPTED)
+as_mentee["received"]["rejected"] = 
+             UserDAO.get_state(mentee_received_relations, 
+             MentorshipRelationState.REJECTED)
+as_mentee["received"]["completed"] = 
+             UserDAO.get_state(mentee_received_relations, 
+             MentorshipRelationState.COMPLETED)
+as_mentee["received"]["cancelled"] = 
+             UserDAO.get_state(mentee_received_relations, 
+             MentorshipRelationState.CANCELLED)
+as_mentee["received"]["pending"] = 
+            UserDAO.get_state(mentee_received_relations, 
+            MentorshipRelationState.PENDING)
+as_mentor["received"]["accepted"] = 
+            UserDAO.get_state(mentor_received_relations, 
+            MentorshipRelationState.ACCEPTED)
+as_mentor["received"]["rejected"] = 
+            UserDAO.get_state(mentor_received_relations, 
+            MentorshipRelationState.REJECTED)
+as_mentor["received"]["completed"] = 
+            UserDAO.get_state(mentor_received_relations, 
+            MentorshipRelationState.COMPLETED)
+as_mentor["received"]["cancelled"] = 
+            UserDAO.get_state(mentor_received_relations, 
+            MentorshipRelationState.CANCELLED)
+as_mentor["received"]["pending"] = 
+            UserDAO.get_state(mentor_received_relations, 
+            MentorshipRelationState.PENDING)
+as_mentee["sent"]["accepted"] =
+            UserDAO.get_state(mentee_sent_relations, 
+            MentorshipRelationState.ACCEPTED)
+as_mentee["sent"]["rejected"] = 
+            UserDAO.get_state(mentee_sent_relations, 
+            MentorshipRelationState.REJECTED)
+as_mentee["sent"]["completed"] = 
+            UserDAO.get_state(mentee_sent_relations, 
+            MentorshipRelationState.COMPLETED)
+as_mentee["sent"]["cancelled"] = 
+            UserDAO.get_state(mentee_sent_relations, 
+            MentorshipRelationState.CANCELLED)
+as_mentee["sent"]["pending"] = 
+            UserDAO.get_state(mentee_sent_relations, 
+            MentorshipRelationState.PENDING)
+as_mentor["sent"]["accepted"] = 
+            UserDAO.get_state(mentor_sent_relations, 
+            MentorshipRelationState.ACCEPTED)
+as_mentor["sent"]["rejected"] = 
+            UserDAO.get_state(mentor_sent_relations, 
+            MentorshipRelationState.REJECTED)
+as_mentor["sent"]["completed"] = 
+            UserDAO.get_state(mentor_sent_relations, 
+            MentorshipRelationState.COMPLETED)
+as_mentor["sent"]["cancelled"] = 
+            UserDAO.get_state(mentor_sent_relations, 
+            MentorshipRelationState.CANCELLED)
+as_mentor["sent"]["pending"] = 
+            UserDAO.get_state(mentor_sent_relations, 
+            MentorshipRelationState.PENDING)
+\end{lstlisting}
 
 \subsection{Issue 6 - Title of issue to be added}
 Pull Request - Efi
