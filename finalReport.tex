@@ -132,9 +132,9 @@ Here is a full list of the parts of our contribution in a wide range of aspects 
 \hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them.
 Fisrtly, we thought that new unit tests were required, combined with the quallity assurane table, but after our comminucation it was clear to us that only the table had to be completed, as the tests already existed.
 While doing this table, by executing some tasks, we found out that there was a possible problem, and an issue had to be raised, as the maintainer agreed.
-
+\subsubsection{Documentation}
+This issue was labeled , among other labels, as documentation, for improvmenets or additions to documentation.
 \subsubsection{Our work}
-
 \hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
 Regarding the way we created the table, firstly we found th file that we had to change, which was easy as the creator of the issue had already mentioned which one is it. Then the difficult part was understanding what exaclty we had to write on the table and how to test it. After going through the test cases to take some ideas on what we could test on the backend server, we tried to create an account on the server. We used temp mail, as it was suggested, and created 4 profiles, so we could test all the possibilities we wanted. For example, we needed a user with a non-verified email, and one with verified. 
@@ -151,7 +151,22 @@ Finally, when we had our users ready, and new how to use the backend server, we 
 4) We had to fix merge conflocts as the PR was approved later.
  Also, other contributors viewed our changes and accepted them. 
 \subsubsection{Change}
-
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=13cm, width=15cm]{517Changes_1.png}}
+    \caption{Files changed on 517}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=13cm, width=15cm]{517Changes_2.png}}
+    \caption{Files changed on 517}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 \subsection{Issue 2 -Fix description messages on Mentorship Relation - \emph{Merged} \#554}
 \subsubsection{Issue}
 % Image
@@ -166,11 +181,49 @@ Finally, when we had our users ready, and new how to use the backend server, we 
 \clearpage
 
 \subsubsection{Communication with the team}
-
+After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and imoprtant -she also mentioned that on the merge of the branch, and congratsed us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
+\subsubsection{Documentation}
+This issue was labeled, among other labels, as documentation, for improvmenets or additions to documentation.
 \subsubsection{Our work}
+After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK_COMMENT_WAS_DELETED_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages.TASK_COMMENT_WAS_DELETED_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
 \subsubsection{Testing}
+\item While running the local server and checking the UI the changes are visible.
+\item All Travis CI tests have passed
 \subsubsection{Code Reviews}
+There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepeted and merged.
 \subsubsection{Change}
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_1.png}}
+    \caption{Issue 567_change1}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_2.png}}
+    \caption{Issue 567_change2}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_3.png}}
+    \caption{Issue 567_change3}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_4.png}}
+    \caption{Issue 567_change4}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+
+\vfill
+\clearpage
 \subsection{Issue 3 - `Complete task` not including all the necessary information when request id is not in accepted mode - \emph{Accepted} \#537}
 
 \subsubsection{Issue}
@@ -199,6 +252,57 @@ After our PR was reviewed and after all the changes requested had been done, an 
 \subsubsection{Code Reviews}
 The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
 \subsubsection{Change}
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_dao_task.png}}
+    \caption{549Changes_dao_task}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_mentorship_relation.png}}
+    \caption{549Changes_mentorship_relation}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_tasks_base_setup.png}}
+    \caption{549Changes_tasks_base_setup}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_tasks_base_setup_2.png}}
+    \caption{549Changes_tasks_base_setup_2}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_dao_complete_task.png}}
+    \caption{549Changes_test_dao_complete_task}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_dao_complete_task.png}}
+    \caption{549Changes_test_dao_complete_task}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+% Image
+\begin{figure}[tph!]
+\centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_data.png}}
+    \caption{549Changes_test_data}
+    \label{fig:verticalcell}
+\end{figure}
+%-----
+\vfill
+\clearpage
 
 \subsection{Issue 4 - Improve the description of the app on the Swagger UI docs - \emph{Merged} \#482}
 \subsubsection{Issue}
