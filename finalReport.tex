@@ -185,17 +185,19 @@ After finding out the problem on the backend server, we created the issue, but w
 \subsubsection{Documentation}
 This issue was labeled, among other labels, as documentation, for improvmenets or additions to documentation.
 \subsubsection{Our work}
-After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK_COMMENT_WAS_DELETED_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages.TASK_COMMENT_WAS_DELETED_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
+After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
 \subsubsection{Testing}
+\begin{itemize}
 \item While running the local server and checking the UI the changes are visible.
 \item All Travis CI tests have passed
+\end{itemize}
 \subsubsection{Code Reviews}
 There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepeted and merged.
 \subsubsection{Change}
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_1.png}}
-    \caption{Issue 567_change1}
+    \caption{Issue 567\_change1}
     \label{fig:verticalcell}
 \end{figure}
 %-----
@@ -203,21 +205,21 @@ There were not any changes requested for our PR. Some tests were asked, to other
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_2.png}}
-    \caption{Issue 567_change2}
+    \caption{Issue 567\_change2}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_3.png}}
-    \caption{Issue 567_change3}
+    \caption{Issue 567\_change3}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{567Changes_4.png}}
-    \caption{Issue 567_change4}
+    \caption{Issue 567\_change4}
     \label{fig:verticalcell}
 \end{figure}
 %-----
@@ -255,49 +257,49 @@ The main part of the PR was approved, and only some minor changes were asked, re
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_dao_task.png}}
-    \caption{549Changes_dao_task}
+    \caption{549Changes\_dao\_task}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_mentorship_relation.png}}
-    \caption{549Changes_mentorship_relation}
+    \caption{549Changes\_mentorship\_relation}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_tasks_base_setup.png}}
-    \caption{549Changes_tasks_base_setup}
+    \caption{549Changes\_tasks\_base\_setup}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_tasks_base_setup_2.png}}
-    \caption{549Changes_tasks_base_setup_2}
+    \caption{549Changes\_tasks\_base\_setup\_2}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_dao_complete_task.png}}
-    \caption{549Changes_test_dao_complete_task}
+    \caption{549Changes\_test\_dao\_complete\_task}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_dao_complete_task.png}}
-    \caption{549Changes_test_dao_complete_task}
+    \caption{549Changes\_test\_dao\_complete\_task}
     \label{fig:verticalcell}
 \end{figure}
 %-----
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_test_data.png}}
-    \caption{549Changes_test_data}
+    \caption{549Changes\_test\_data}
     \label{fig:verticalcell}
 \end{figure}
 %-----
