@@ -133,22 +133,22 @@ Here is a full list of the parts of our contribution in a wide range of aspects 
 Fisrtly, we thought that new unit tests were required, combined with the quallity assurane table, but after our comminucation it was clear to us that only the table had to be completed, as the tests already existed.
 While doing this table, by executing some tasks, we found out that there was a possible problem, and an issue had to be raised, as the maintainer agreed.
 \subsubsection{Documentation}
-This issue was labeled , among other labels, as documentation, for improvmenets or additions to documentation.
+This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
 \subsubsection{Our work}
 \hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
 Regarding the way we created the table, firstly we found th file that we had to change, which was easy as the creator of the issue had already mentioned which one is it. Then the difficult part was understanding what exaclty we had to write on the table and how to test it. After going through the test cases to take some ideas on what we could test on the backend server, we tried to create an account on the server. We used temp mail, as it was suggested, and created 4 profiles, so we could test all the possibilities we wanted. For example, we needed a user with a non-verified email, and one with verified. 
 Then, we strugled a lot to find out the parameters-arguments that were needed for completing the task we wanted. For example a "token" was required but there was nowhere any explanation about this token. After some searching, we realised that when a user is logging in the server, the success message also provides this token. But even the way that we needed to insert the token was unusual, as we had to write "Bearer <token here>"
-Finally, when we had our users ready, and new how to use the backend server, we finallly tested all the scenarios and write them down in the table.
+Finally, when we had our users ready, and knew how to use the backend server, we finallly tested all the scenarios and write them down in the table.
 
 \subsubsection{Testing}
 \hspace{0.5cm}Since this change was a change in the UI we did not need to run local testing or write new tests. Instead, our changes were visible in github, as the file was written in markdown language and that's how we verified that our changes were visible and correct. Also, we verified that the continuous integration testing in Travis CI was passing. 
 \subsubsection{Code Reviews}
-\hspace{0.5cm}Our pull request received immidiate feedback and reviews. our first PR needed some important changes:
+\hspace{0.5cm}Our pull request received immidiate feedback and reviews. Our first PR needed some important changes:
 1) We were checking multiple failing variables, but only one was required each time. For example we were testing the result of the task with arg1 and arg2 causing the task to fail but arg1 was enough and a separate test for arg2 was required. 
 2) We were describing a variable/argument as "wrong" but we did not specify why it was wrong. For example, a user could not exist, or he could have not accepted the terms, or even not verufy his email address. These 3 cases should be separate and specified.
 3) We reffered the users with pronouns and we had to make it general ("the user" instead of "he").
-4) We had to fix merge conflocts as the PR was approved later.
+4) We had to fix merge conflicts as the PR was approved later.
  Also, other contributors viewed our changes and accepted them. 
 \subsubsection{Change}
 % Image
@@ -181,11 +181,12 @@ Finally, when we had our users ready, and new how to use the backend server, we 
 \clearpage
 
 \subsubsection{Communication with the team}
-After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and imoprtant -she also mentioned that on the merge of the branch, and congratsed us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
+After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and important -she also mentioned that on the merge of the branch, and congratulated us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
 \subsubsection{Documentation}
-This issue was labeled, among other labels, as documentation, for improvmenets or additions to documentation.
+This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
 \subsubsection{Our work}
-After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
+After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages. \newline
+TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
 \subsubsection{Testing}
 \begin{itemize}
 \item While running the local server and checking the UI the changes are visible.
@@ -246,7 +247,6 @@ We had already talked about this issue with the maintainer in a PR, so after the
 
 We added an if statement before the existings one, so that it will be prioratized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
 
-After the original 
 \subsubsection{Testing}
 Initially, we didn't have any unit testing for the speific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
 After our PR was reviewed and after all the changes requested had been done, an additional test was asked, a unit test. To create this, we needed to also add a user to the database and create a new relation of this user with another user.
@@ -279,13 +279,6 @@ The main part of the PR was approved, and only some minor changes were asked, re
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=15cm, width=16cm]{549Changes_tasks_base_setup_2.png}}
     \caption{549Changes\_tasks\_base\_setup\_2}
-    \label{fig:verticalcell}
-\end{figure}
-%-----
-% Image
-\begin{figure}[tph!]
-\centerline{\includegraphics[totalheight=13cm, width=17cm]{549Changes_test_dao_complete_task.png}}
-    \caption{549Changes\_test\_dao\_complete\_task}
     \label{fig:verticalcell}
 \end{figure}
 %-----
