@@ -45,7 +45,7 @@ work more professionally and to create production-ready code.
 \newpage
 
 \section*{Introduction}
-\hspace{0.5cm}The methodology we used for this assignment can be split into two main parts. Firstly, in the selection of the open-source project we worked in a structured way, so we did research individually in projetcs of our interests and focused in specific programming languages. We categorized our findings and decided on the project. The second part is how we worked in the open-source project itself. We worked on already made issues and issues we identified.  Each one of us was assigned to a specific issue, and he/ she undertook namely all the work on this issue, regarding branching, writing, communicating, opening a Pull Request and solving changes required using Github. For solving each of the issues mentioned we worked together, via Teamviewer, we agreed and implemented  all the changes we would propose. All the chages we are suggesting and discussions are available on Github in the specific issues we are mentioning.
+\hspace{0.5cm}The methodology we used for this assignment can be split into two main parts. Firstly, in the selection of the open-source project we worked in a structured way, so we did research individually in projects of our interests and focused in specific programming languages. We categorized our findings and decided on the project. The second part is how we worked in the open-source project itself. We worked on already made issues and issues we identified.  Each one of us was assigned to a specific issue, and he/ she undertook namely all the work on this issue, regarding branching, writing, communicating, opening a Pull Request and solving changes required using Github. For solving each of the issues mentioned we worked together, via Teamviewer, we agreed and implemented  all the changes we would propose. All the changes we are suggesting and discussions are available on Github in the specific issues we are mentioning.
 
 \section{Project Selection Process}
 
@@ -66,7 +66,7 @@ To sum up, the reasons why we chose Mentorship Backend are these:
 \end{itemize}
 
 \subsection{Troubleshooting}
-\hspace{0.5cm}Of course, we were not able to build the projects immidiately since we had some setup problems. We asked the community on Zulip to guide us through this process and if they knew how to solve our problems. Here is the questions we asked summarized:
+\hspace{0.5cm}Of course, we were not able to build the projects immediately since we had some setup problems. We asked the community on Zulip to guide us through this process and if they knew how to solve our problems. Here is the questions we asked summarized:
 
 
 % Image
@@ -91,7 +91,7 @@ After a vary insightful discussion with the community we were able to build the 
 
 \section{Mentorship Backend}
 
-\hspace{0.5cm}Mentorship System is an application that matches women in tech to mentor each other, on career development, through 1:1 relations during a certain period of time. The project is deplyed in Heroku in this link: https://mentorship-backend-temp.herokuapp.com/. The backend is based on a REST API. There is also the Android client of the app for creating the interface for the users. [3]
+\hspace{0.5cm}Mentorship System is an application that matches women in tech to mentor each other, on career development, through 1:1 relations during a certain period of time. The project is deployed in Heroku in this link: https://mentorship-backend-temp.herokuapp.com/. The backend is based on a REST API. There is also the Android client of the app for creating the interface for the users. [3]
 
 The repository has the following permanent branches:
 \begin{itemize}
@@ -111,7 +111,7 @@ The repository has the following permanent branches:
 \clearpage
 
 \section{Our contribution}
-Here is a full list of the parts of our contribution in a wide range of aspects such as quality assurance, user interface, code and testing. 
+\hspace{0.5cm}Here is a full list of the parts of our contribution in a wide range of aspects such as quality assurance, user interface, code and testing. 
 
 \subsection{Issue 1 - Create Quality Assurance table for Update Task API - \emph{Merged} \#473}
 
@@ -131,22 +131,22 @@ Here is a full list of the parts of our contribution in a wide range of aspects 
 \subsubsection{Communication with the team}
 
 \hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them.
-Fisrtly, we thought that new unit tests were required, combined with the quallity assurane table, but after our comminucation it was clear to us that only the table had to be completed, as the tests already existed.
+Firstly, we thought that new unit tests were required, combined with the quality assurance table, but after our communication it was clear to us that only the table had to be completed, as the tests already existed.
 While doing this table, by executing some tasks, we found out that there was a possible problem, and an issue had to be raised, as the maintainer agreed.
 \subsubsection{Our work}
-\hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+\hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong strategy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
-Regarding the way we created the table, firstly we found th file that we had to change, which was easy as the creator of the issue had already mentioned which one is it. Then the difficult part was understanding what exaclty we had to write on the table and how to test it. After going through the test cases to take some ideas on what we could test on the backend server, we tried to create an account on the server. We used temp mail, as it was suggested, and created 4 profiles, so we could test all the possibilities we wanted. For example, we needed a user with a non-verified email, and one with verified. 
-Then, we strugled a lot to find out the parameters-arguments that were needed for completing the task we wanted. For example a "token" was required but there was nowhere any explanation about this token. After some searching, we realised that when a user is logging in the server, the success message also provides this token. But even the way that we needed to insert the token was unusual, as we had to write "Bearer <token here>"
-Finally, when we had our users ready, and knew how to use the backend server, we finallly tested all the scenarios and write them down in the table.
+Regarding the way we created the table, firstly we found th file that we had to change, which was easy as the creator of the issue had already mentioned which one is it. Then the difficult part was understanding what exactly we had to write on the table and how to test it. After going through the test cases to take some ideas on what we could test on the backend server, we tried to create an account on the server. We used temp mail, as it was suggested, and created 4 profiles, so we could test all the possibilities we wanted. For example, we needed a user with a non-verified email, and one with verified. 
+Then, we struggled a lot to find out the parameters-arguments that were needed for completing the task we wanted. For example a "token" was required but there was nowhere any explanation about this token. After some searching, we realised that when a user is logging in the server, the success message also provides this token. But even the way that we needed to insert the token was unusual, as we had to write "Bearer <token here>"
+Finally, when we had our users ready, and knew how to use the backend server, we finally tested all the scenarios and write them down in the table.
 
 \subsubsection{Testing}
 \hspace{0.5cm}Since this change was a change in the UI we did not need to run local testing or write new tests. Instead, our changes were visible in github, as the file was written in markdown language and that's how we verified that our changes were visible and correct. Also, we verified that the continuous integration testing in Travis CI was passing. 
 \subsubsection{Code Reviews}
-\hspace{0.5cm}Our pull request received immidiate feedback and reviews. Our first PR needed some important changes:
+\hspace{0.5cm}Our pull request received immediate feedback and reviews. Our first PR needed some important changes:
 1) We were checking multiple failing variables, but only one was required each time. For example we were testing the result of the task with arg1 and arg2 causing the task to fail but arg1 was enough and a separate test for arg2 was required. 
 2) We were describing a variable/argument as "wrong" but we did not specify why it was wrong. For example, a user could not exist, or he could have not accepted the terms, or even not verufy his email address. These 3 cases should be separate and specified.
-3) We reffered the users with pronouns and we had to make it general ("the user" instead of "he").
+3) We referred the users with pronouns and we had to make it general ("the user" instead of "he").
 4) We had to fix merge conflicts as the PR was approved later.
  Also, other contributors viewed our changes and accepted them. 
 \subsubsection{Change}
@@ -181,7 +181,7 @@ Finally, when we had our users ready, and knew how to use the backend server, we
 \clearpage
 
 \subsubsection{Communication with the team}
-\hspace{0.5cm}After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and important -she also mentioned that on the merge of the branch, and congratulated us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
+\hspace{0.5cm}After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and important -she also mentioned that on the merge of the branch, and congratulated us for pointing out the mistake and for solving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
 \subsubsection{Our work}
 \hspace{0.5cm}After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages. \newline
 TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
@@ -191,7 +191,7 @@ TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the speci
 \item All Travis CI tests have passed
 \end{itemize}
 \subsubsection{Code Reviews}
-\hspace{0.5cm}There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepeted and merged.
+\hspace{0.5cm}There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepted and merged.
 \subsubsection{Change}
 % Image
 \begin{figure}[tph!]
@@ -243,14 +243,14 @@ TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the speci
 
 \subsubsection{Our work}
 
-\hspace{0.5cm}We added an if statement before the existings one, so that it will be prioritized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
+\hspace{0.5cm}We added an if statement before the existings one, so that it will be prioritized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc.) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
 
 \subsubsection{Testing}
-\hspace{0.5cm}Initially, we didn't have any unit testing for the speific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
+\hspace{0.5cm}Initially, we didn't have any unit testing for the specific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
 After our PR was reviewed and after all the changes requested had been done, an additional test was asked, a unit test. To create this, we needed to also add a user to the database and create a new relation of this user with another user.
 
 \subsubsection{Code Reviews}
-\hspace{0.5cm}The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
+\hspace{0.5cm}The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of hardcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
 \subsubsection{Change}
 % Image
 \begin{figure}[tph!]
@@ -311,19 +311,19 @@ After our PR was reviewed and after all the changes requested had been done, an 
 \vfill
 \clearpage
 \subsubsection{Communication with the team}										
-\hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them. We realized while working on the issue that there was an issue with the namespaces since there was a default namespace which was not referring to any API. We decided to ask about this if this was intentional or it was a problem in the UI. In figure shown above this problem is visible in the `default namespace` resource. Isabel (the main mainteiner and creator of the project) told us that this was really an issue and that she did not know how to solve it. She suggested that if we solve this problem we can commit the change in the current pull request so as to further expand it so it includes the solution of this problem as well.
+\hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them. We realized while working on the issue that there was an issue with the namespaces since there was a default namespace which was not referring to any API. We decided to ask about this if this was intentional or it was a problem in the UI. In figure shown above this problem is visible in the `default namespace` resource. Isabel (the main maintainer and creator of the project) told us that this was really an issue and that she did not know how to solve it. She suggested that if we solve this problem we can commit the change in the current pull request so as to further expand it so it includes the solution of this problem as well.
 
 \subsubsection{Our work}
 
-\hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
+\hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong stategy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
-Regarding the initial issue, it turned out to be hard for us t understand which part on the project we should change in order for our changes to be visible in the User Interface. We used Atom, the text editor, to find the parts of the software which had the initial description we wanted to change. They were two, the swagger.json and the api\_extension.py file. Since we did not know which was the correct file we should change we decided to change both of them. The correct one turned out to be the api\_extension.py file. We were able to view our changes locally.
+Regarding the initial issue, it turned out to be hard for us to understand which part on the project we should change in order for our changes to be visible in the User Interface. We used Atom, the text editor, to find the parts of the software which had the initial description we wanted to change. They were two, the swagger.json and the api\_extension.py file. Since we did not know which was the correct file we should change we decided to change both of them. The correct one turned out to be the api\_extension.py file. We were able to view our changes locally.
 
 Regarding the new part of the issue we identified and proposed, we needed to understand were the problem was coming from. It could have been from the call inside the specific resources or in some other part of the project. We searched a lot and found the documentation of the flask\_restplus library which was used in the file we wanted to change. We found the method Api() and which parameters it could include and we were able to change the arguments and change the name of the `default namespace'. The documentation however, did not help us fix the actual issue which was to remove this resource. We searched again and found out that this library was actually open-source. In the issues of the Github repository we were able to find an issue about the same problem we had and a suggested solution to it. By implementing this code we were able to solve the issue.
 \subsubsection{Testing}
 \hspace{0.5cm}Since this change was a change in the UI we did not need to run local testing or write new tests. Instead, our changes were visible in the localhost in our browser and that's how we verified that our changes were visible and correct. Also, we verified that the continuous integration testing in Travis CI was passing. 
 \subsubsection{Code Reviews}
-\hspace{0.5cm}Our pull request received immidiate feedback and reviews. Since the change was in the User Interface, Isabel asked us to include a screenshot of the change proposed in the description. Also, other contributors viewed our changes and accepted them. 
+\hspace{0.5cm}Our pull request received immediate feedback and reviews. Since the change was in the User Interface, Isabel asked us to include a screenshot of the change proposed in the description. Also, other contributors viewed our changes and accepted them. 
 \subsubsection{Change}
 \hspace{0.5cm}The merged change is this:
 % Image
@@ -347,7 +347,7 @@ Regarding the new part of the issue we identified and proposed, we needed to und
 \vfill
 \clearpage
 \subsubsection{Happy Moments!}
-The creator and main maintainer of the project congratulated us for our effiort and change in the UI which urged us to find other aspects of the software in which we could contribute.
+The creator and main maintainer of the project congratulated us for our effort and change in the UI which urged us to find other aspects of the software in which we could contribute.
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=10cm, width=15cm]{Happy-Moments.png}}
@@ -521,21 +521,21 @@ What we did find out what-so-ever was that the structure of all the tests was no
 \clearpage
 
 \subsubsection{Communication with the team}
-\hspace{0.5cm}Since the issue was suggested by us we were waiting to hear the response from the main maintainerIsabel about this issue.
+\hspace{0.5cm}Since the issue was suggested by us we were waiting to hear the response from the main maintainer Isabel about this issue.
 
-The main maintainer Isabel wrote that she believes that there are issues with higher priority but we could go ahead and work on this issue and propose a solution and how we believe it solves the problem. We thought it would be bettor to implement the change and propose the final version of it istead of submitting a Work In Progress Pull Review so the maintainers could check the whole width of our change.
+The main maintainer Isabel wrote that she believes that there are issues with higher priority but we could go ahead and work on this issue and propose a solution and how we believe it solves the problem. We thought it would be bettor to implement the change and propose the final version of it instead of submitting a Work In Progress Pull Review so the maintainers could check the whole width of our change.
 \subsubsection{Our work}
 \hspace{0.5cm}We created a specific branch for this issue first locally and then add this branch to our remote repository. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
 The problem stemmed from the fact that all the testing of the project was not following the same structure. In some cases the code included in each folder test for base setup and in others not, in others a method was tested in a specific file and in others not, so we thought it was crucial to implement a change which would expand the consistency of the project. We decided that the best strategy for changing the given file was this:
 \begin{itemize}
   \item Write a base setup for tests/task\_comments/test\_dao.py
-  \item Split  tests/task\_comments/test\_dao.py into four different files. In each one, every method would be tested seperately.
+  \item Split  tests/task\_comments/test\_dao.py into four different files. In each one, every method would be tested separately.
 \end{itemize}
 
 To address the first bullet, we needed to understand how a base setup is created and how it is used. We wanted to understand how the setup method is used and how it should be structured to serve our needs. Since, the create\_task\_comment method  was used in all the methods we decided that this was the method which should be used for the setup to avoid code repetition. In order to save each task comment we had to add it in the session of the database and also to commit in the database. In this way, the base setup class which created a new Test Case and all the data, could be used in the unit testing classes we implemented. 
 
-For the second bullet, we splited the test methods into four different files, one for each method:
+For the second bullet, we split the test methods into four different files, one for each method:
 \begin{itemize}
   \item test\_dao\_create\_task\_comment.py 
   \item test\_dao\_delete\_comment.py  
@@ -543,12 +543,12 @@ For the second bullet, we splited the test methods into four different files, on
   \item test\_dao\_find\_by\_task\_id.py 
 \end{itemize}
 \subsubsection{Testing}
-\hspace{0.5cm}Testing our addition in this case was harder than in previous points since we were altering the testing of the project. Firstly, we did not delete the class we were altering yet, so we saw the counter of how many tests were already running before our addition. Then, we included our tests and saw if all our tests were passing the testing locally. All the tests were successfully passing in the command line but we wanted to double-check so we run the test\_task\_comments folder seperately through PyCharm. Once we were sure that all our changes were passing we deleted the initial file, commited and created the Pull Request.
+\hspace{0.5cm}Testing our addition in this case was harder than in previous points since we were altering the testing of the project. Firstly, we did not delete the class we were altering yet, so we saw the counter of how many tests were already running before our addition. Then, we included our tests and saw if all our tests were passing the testing locally. All the tests were successfully passing in the command line but we wanted to double-check so we run the test\_task\_comments folder separately through PyCharm. Once we were sure that all our changes were passing we deleted the initial file, committed and created the Pull Request.
 
 \subsubsection{Code Reviews}
 \hspace{0.5cm}In the beginning our change received mixed reviews. Of course, there were suggested some minor changes to the code such as to remove unnecessary imports and repetitive code (which turned out to be from the initial testing) but also the argument that this change was not needed right now since there was not a problem.
 
-Regarding the minor changes we addressed them all, since there were important for the crrectness of our change. One suggested change about the repited code turned out to have been from the primary testing so we thought that even though it did not seem so, that it was needed in the project. Turns out it was not so we fixed it.
+Regarding the minor changes we addressed them all, since there were important for the correctness of our change. One suggested change about the repetead code turned out to have been from the primary testing so we thought that even though it did not seem so, that it was needed in the project. Turns out it was not so we fixed it.
 
 Regarding the major arguments about the idea of the change and if it was really needed at this point we analyzed our thinking and said that:
 \begin{itemize}
