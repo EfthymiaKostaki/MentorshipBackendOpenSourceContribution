@@ -45,7 +45,7 @@ work more professionally and to create production-ready code.
 \newpage
 
 \section*{Introduction}
-The methodology we used for this assignment can be split into two main parts. Firstly, in the selection of the open-source project we worked in a structured way, so we did research individually in projetcs of our interests and focused in specific programming languages. We categorized our findings and decided on the project. The second part is how we worked in the open-source project itself. We worked on already made issues and issues we identified.  Each one of us was assigned to a specific issue, and he/ she undertook namely all the work on this issue, regarding branching, writing, communicating, opening a Pull Request and solving changes required using Github. For solving each of the issues mentioned we worked together, via Teamviewer, we agreed and implemented  all the changes we would propose. All the chages we are suggesting and discussions are available on Github in the specific issues we are mentioning.
+\hspace{0.5cm}The methodology we used for this assignment can be split into two main parts. Firstly, in the selection of the open-source project we worked in a structured way, so we did research individually in projetcs of our interests and focused in specific programming languages. We categorized our findings and decided on the project. The second part is how we worked in the open-source project itself. We worked on already made issues and issues we identified.  Each one of us was assigned to a specific issue, and he/ she undertook namely all the work on this issue, regarding branching, writing, communicating, opening a Pull Request and solving changes required using Github. For solving each of the issues mentioned we worked together, via Teamviewer, we agreed and implemented  all the changes we would propose. All the chages we are suggesting and discussions are available on Github in the specific issues we are mentioning.
 
 \section{Project Selection Process}
 
@@ -66,7 +66,7 @@ To sum up, the reasons why we chose Mentorship Backend are these:
 \end{itemize}
 
 \subsection{Troubleshooting}
-Of course, we were not able to build the projects immidiately since we had some setup problems. We asked the community on Zulip to guide us through this process and if they knew how to solve our problems. Here is the questions we asked summarized:
+\hspace{0.5cm}Of course, we were not able to build the projects immidiately since we had some setup problems. We asked the community on Zulip to guide us through this process and if they knew how to solve our problems. Here is the questions we asked summarized:
 
 
 % Image
@@ -116,6 +116,7 @@ Here is a full list of the parts of our contribution in a wide range of aspects 
 \subsection{Issue 1 - Create Quality Assurance table for Update Task API - \emph{Merged} \#473}
 
 \subsubsection{Issue}
+\hspace{0.5cm}This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=13cm, width=15cm]{issue473.png}}
@@ -132,8 +133,6 @@ Here is a full list of the parts of our contribution in a wide range of aspects 
 \hspace{0.5cm}This issue was labeled for first-time contributors so we asked if we could work on this issue to understand the project better. The main maintainer was really helpful and answering out questions soon after we sent them.
 Fisrtly, we thought that new unit tests were required, combined with the quallity assurane table, but after our comminucation it was clear to us that only the table had to be completed, as the tests already existed.
 While doing this table, by executing some tasks, we found out that there was a possible problem, and an issue had to be raised, as the maintainer agreed.
-\subsubsection{Documentation}
-This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
 \subsubsection{Our work}
 \hspace{0.5cm}We worked in the default develop branch for this issue. We came to realize that this was a wrong startegy so in all other issues we created a specific branch for them. We tried to write meaningful messages in our commit messages always following the commit style guide suggested by the project. When we thought that the commit message was not understandable enough we wrote a body in our commit messages and documented further our change.
 
@@ -169,6 +168,7 @@ Finally, when we had our users ready, and knew how to use the backend server, we
 \clearpage
 \subsection{Issue 2 -Fix description messages on Mentorship Relation - \emph{Merged} \#554}
 \subsubsection{Issue}
+\hspace{0.5cm}This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=13cm, width=16cm]{issue554part1.png}}
@@ -181,11 +181,9 @@ Finally, when we had our users ready, and knew how to use the backend server, we
 \clearpage
 
 \subsubsection{Communication with the team}
-After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and important -she also mentioned that on the merge of the branch, and congratulated us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
-\subsubsection{Documentation}
-This issue was labeled, among other labels, as documentation, for improvements or additions to documentation.
+\hspace{0.5cm}After finding out the problem on the backend server, we created the issue, but we did not know which style of the two we found was the correct one. Thus we posted also in zulip, in the corresponding channel, where we were also posting questions we had when we were working on other issues. The maintainer saw our post and found our observation very interesting and important -she also mentioned that on the merge of the branch, and congratulated us for pointing out the mistake and for sloving it. Therefore, after clearing out which style was the correct one, she assigned us to the issue.
 \subsubsection{Our work}
-After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages. \newline
+\hspace{0.5cm}After studing f-strings and how they work, we went through the code that is responsible for showing the description on the backend. We tracked the file, and the part that needed change, and we realised that dictionaries were used in a wrong way. Instead of printing the whole dictionary, for example messages.TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY, only the word of the key-"message" was printed, for example messages. \newline
 TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the specific key, and then the whole dictionary was showed, as was requested by the maintainer. We also used f-strings, in cases were the correct message appeared but without the use of f-strings, which was in the code standards of the project.
 \subsubsection{Testing}
 \begin{itemize}
@@ -193,7 +191,7 @@ TASK\_COMMENT\_WAS\_DELETED\_SUCCESSFULLY["message"]. Thus, we removed the speci
 \item All Travis CI tests have passed
 \end{itemize}
 \subsubsection{Code Reviews}
-There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepeted and merged.
+\hspace{0.5cm}There were not any changes requested for our PR. Some tests were asked, to other reviewers for checking if our changes were visible after merging this branch, which was confirmed by other reviewers, and our PR was accepeted and merged.
 \subsubsection{Change}
 % Image
 \begin{figure}[tph!]
@@ -241,18 +239,18 @@ There were not any changes requested for our PR. Some tests were asked, to other
 \vfill
 \clearpage
 \subsubsection{Communication with the team}
-We had already talked about this issue with the maintainer in a PR, so after the maintainer's approval, we opened a new issue, and got assigned to it. We also clarified, that the solution suggested on this issue, is giving higher priority to a specific argument, whih was the state of the relationship status, instead of the one that was then highest, which was the existence of the task.
+\hspace{0.5cm}We had already talked about this issue with the maintainer in a PR, so after the maintainer's approval, we opened a new issue, and got assigned to it. We also clarified, that the solution suggested on this issue, is giving higher priority to a specific argument, whih was the state of the relationship status, instead of the one that was then highest, which was the existence of the task.
 
 \subsubsection{Our work}
 
-We added an if statement before the existings one, so that it will be prioritized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
+\hspace{0.5cm}We added an if statement before the existings one, so that it will be prioritized, and included the new possible responses on the responses board on the backend server. After that we changed the hardcoded status (i.e. 400,401 etc) to http status. Then, we changed the way messages were printed into f strings and added some blank spaces that were needed. Finally, we wrote a unit test for the added if statement.
 
 \subsubsection{Testing}
-Initially, we didn't have any unit testing for the speific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
+\hspace{0.5cm}Initially, we didn't have any unit testing for the speific change, and we tested it only on the backend server, and we also confirmed that the continuous integration testing in Travis CI was passing. 
 After our PR was reviewed and after all the changes requested had been done, an additional test was asked, a unit test. To create this, we needed to also add a user to the database and create a new relation of this user with another user.
 
 \subsubsection{Code Reviews}
-The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
+\hspace{0.5cm}The main part of the PR was approved, and only some minor changes were asked, regarding new standards(http status instead of harcoded numbers, f strings for printing messages) and a blank line to separate visually validation sections. After these minor changes, a unit test was asked.
 \subsubsection{Change}
 % Image
 \begin{figure}[tph!]
@@ -581,6 +579,7 @@ The maintainer Sanket, who had his doubts about our change after our discussion 
 \subsection{Issue 7 - Fix description messages on Backend Server - \emph{Pending}  \#577}
 Similar to Issue 2 but addressed the whole project namely the resources Admins and Users.
 \subsubsection{Issue}
+This change required a change in the documentation of the resources. This was labeled in the issue as a label by the maintainers. 
 % Image
 \begin{figure}[tph!]
 \centerline{\includegraphics[totalheight=10cm, width=15cm]{issue577.png}}
@@ -593,10 +592,6 @@ Similar to Issue 2 but addressed the whole project namely the resources Admins a
 
 \subsubsection{Communication with the team}
 Since we were the ones who created the issue we did not want to start working in it before we were assigned. We asked siddhipandare if we could be assigned to this  issue and said that yes we could start working on it.
-
-\subsubsection{Documentation}
-This change required a change in the documentation of the resources. This was labeled in the issue as a label by the maintainers. 
-
 \subsubsection{Our work}
 Since, we were already familiar in the way this issue should be solved we utilized the knowledge from issue 2 to correct the messages in the resources of Users and Admins, change to fstrings and create new specific messages in the messages.py. For more specifics on how we worked on that issue refer to issue 2.
 
@@ -607,7 +602,7 @@ Since, we were already familiar in the way this issue should be solved we utiliz
 \end{itemize}
 
 \subsubsection{Code Reviews}
-Unfortunately, this review has not received a code review yet probably because of the limit of the bandwidth of the maintainers.
+The maintainers answered some days before of the final presentation and asked for some changes, on how to fix some messages that we could not change. We have planned to address these changes , as soon as possible. 
 
 \subsubsection{Change}
 We changed three files so we present here only our changed code. 
